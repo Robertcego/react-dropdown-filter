@@ -64,13 +64,22 @@ function Main() {
               margin: ('1rem', '1rem'),
               backgroundColor: '#f5f5f5',
               color: '#333',
+              display: 'flex',
             }}
           >
-            <img src={d.image} alt={d.name} />
-            <p>Name: {d.name}</p>
-            <p>Status: {d.status}</p>
-            <p>Type: {d.species}</p>
-            <p>Origin: {d.origin.name}</p>
+            <div>
+              <img
+                src={d.image}
+                alt={d.name}
+                style={{ width: '100%', padding: '10px' }}
+              />
+            </div>
+            <div style={{ textAlign: 'center', padding: '2rem' }}>
+              <p>Name: {d.name}</p>
+              <p>Status: {d.status}</p>
+              <p>Type: {d.species}</p>
+              <p>Origin: {d.origin.name}</p>
+            </div>
           </div>
         ) : null
       )}
